@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>Time to setup Moves API</h1>
+		</div>
+		<div class="col-xs-6">
+			<h1 *ngIf="loading" ><loader></loader></h1>
+		</div>
+	</div>
+	<form>
+		<div class="form-group">
+			<div class="input-group">
+				<label for="authentication">Enter auth stringy</label>
+				<input 	[(ngModel)]="auth"
+						type="text" 
+						class="form-control" 
+						id="authentication" 
+						name="authentication" 
+						placeholder="Auth String">
+			</div>
+		</div>
+		<div *ngIf="profileErrorMessage" class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			Wrong Auth<br/>
+			Additional info : <pre>{{profileErrorMessage}}</pre>
+		</div>
+  		<button type="button" (click)="submitAuth()" class="btn btn-default">Go Ahead</button>
+	</form>
+</div>

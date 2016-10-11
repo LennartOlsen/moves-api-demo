@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>Time to get moves</h1>
+		</div>
+		<div class="col-xs-6">
+			<h1 *ngIf="loading" ><loader></loader></h1>
+		</div>
+	</div>
+	<form *ngIf="!ready">
+		<div class="form-group">
+			<div class="input-group">
+				<p>Time format is yyyy, yyyyMM, yyyyMMdd</p>
+				<label for="date">Enter date num</label>
+				<input 	[(ngModel)]="date"
+						type="number" 
+						class="form-control" 
+						id="date" 
+						name="date" 
+						placeholder="Date Num">
+			</div>
+		</div>
+		<div *ngIf="dateErrorMessage" class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			Wrong Date<br/>
+			Additional info : <pre>{{dateErrorMessage}}</pre>
+		</div>
+  		<button type="button" (click)="submitDate()" class="btn btn-default">Go Ahead</button>
+	</form>
+	<div *ngIf="ready">
+		<chart [options]="opts"></chart>
+	</div>
+</div>
