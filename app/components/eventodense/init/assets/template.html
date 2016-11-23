@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Event Odense</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6" *ngIf="!loading">
+			<h2>Select an Event</h2>
+			<div *ngFor="let event of events" >
+				<a [routerLink]="['/events', event.id]">>{{event.name}}</a>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<create-event-component
+			[event]="newEvent"
+			[loading]="loading"
+			(submit)="onEventSubmit()"></create-event-component>
+		</div>
+	</div>
+</div>

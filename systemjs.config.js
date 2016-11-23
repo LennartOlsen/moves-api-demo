@@ -24,7 +24,9 @@
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular2-highcharts':                      'npm:angular2-highcharts',
-      'highcharts/highstock.src':   'https://cdn.rawgit.com/highcharts/highcharts-dist/v4.2.1/highstock.js'
+      'highcharts/highstock.src':   'npm:highcharts/highcharts.js',
+      'leaflet': 'npm:leaflet/dist/leaflet.js',
+      'seedrandom': 'npm:seedrandom/seedrandom.min.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -33,6 +35,9 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        defaultExtension: 'js'
+      },
+      seedrandom : {
         defaultExtension: 'js'
       },
       'angular2-highcharts': {

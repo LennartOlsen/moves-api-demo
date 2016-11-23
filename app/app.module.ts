@@ -10,13 +10,16 @@ import { routing,
 
 import { MovesModule } from './components/moves/module/moves.module'
 
+import { EventOdenseModule } from './components/eventodense/module/eventodense.module'
+
 
 @NgModule({
   imports:      [ BrowserModule, 
                   HttpModule, 
                   JsonpModule, 
                   routing,
-                  MovesModule ],
+                  MovesModule,
+                  EventOdenseModule ],
   declarations: [ AppComponent, HomeComponent ],
   bootstrap:    [ AppComponent ],
   providers: [

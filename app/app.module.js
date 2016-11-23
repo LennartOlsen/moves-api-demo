@@ -15,6 +15,7 @@ var app_component_1 = require('./components/app.component');
 var home_component_1 = require('./components/global/home/home.component');
 var app_routing_1 = require('./components/global/route/app.routing');
 var moves_module_1 = require('./components/moves/module/moves.module');
+var eventodense_module_1 = require('./components/eventodense/module/eventodense.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +25,8 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 http_1.JsonpModule,
                 app_routing_1.routing,
-                moves_module_1.MovesModule],
+                moves_module_1.MovesModule,
+                eventodense_module_1.EventOdenseModule],
             declarations: [app_component_1.AppComponent, home_component_1.HomeComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [

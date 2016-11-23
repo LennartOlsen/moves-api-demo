@@ -1,0 +1,134 @@
+<h2>Create an event</h2>
+<form id="newEvent" (submit)="submitted($event)" #eventForm="ngForm">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="formGroup">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" id="name"
+					required
+					[(ngModel)]="event.name" name="name"
+					#name="ngModel">
+				<div [hidden]="name.valid || name.pristine" 
+					class="alert alert-danger">
+					Name is required
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="formGroup">
+				<label for="name">Id</label>
+				<input type="text" class="form-control" id="eventid"
+					required
+					[(ngModel)]="event.id" name="eventid"
+					#id="ngModel" >
+				<div [hidden]="id.valid || id.pristine" 
+					class="alert alert-danger">
+					Id is required
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="formGroup">
+				<label for="lat">lat</label>
+				<input type="text" class="form-control" id="lat"
+					required
+					[(ngModel)]="event.lat" name="lat"
+					#lat="ngModel" >
+				<div [hidden]="lat.valid || lat.pristine" 
+					class="alert alert-danger">
+					lat is required
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="formGroup">
+				<label for="lng">lng</label>
+				<input type="text" class="form-control" id="lng"
+					required
+					[(ngModel)]="event.lng" name="lng"
+					#lng="ngModel" >
+				<div [hidden]="lng.valid || lng.pristine" 
+					class="alert alert-danger">
+					lng is required
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="formGroup">
+				<label for="radius">radius in meters</label>
+				<input type="text" class="form-control" id="radius"
+					required
+					type="number"
+					[(ngModel)]="event.radius" name="radius"
+					#radius="ngModel" />
+				<div [hidden]="radius.valid || radius.pristine" 
+					class="alert alert-danger">
+					radius is required
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="formGroup">
+				<label for="start">start</label>
+				<input type="text" class="form-control" id="start"
+					required
+					type="date"
+					[(ngModel)]="event.start_date" name="start"
+					#start="ngModel" >
+				<div [hidden]="start.valid || start.pristine" 
+					class="alert alert-danger">
+					start is required
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="formGroup">
+				<label for="end">end</label>
+				<input type="text" class="form-control" id="end"
+					required
+					type="date"
+					[(ngModel)]="event.end_date" name="end"
+					#end="ngModel" >
+				<div [hidden]="end.valid || end.pristine" 
+					class="alert alert-danger">
+					end is required
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="formGroup">
+		<label for="description">description</label>
+		<textarea type="text" class="form-control" id="description"
+			required
+			[(ngModel)]="event.description" name="description"
+			#description="ngModel" ></textarea>
+		<div [hidden]="description.valid || description.pristine" 
+			class="alert alert-danger">
+			description is required
+		</div>
+	</div>
+	<div class="formGroup">
+		<label for="color">color</label>
+		<input type="text" class="form-control" id="color"
+			required
+			type="color"
+			[(ngModel)]="event.color" name="color"
+			#color="ngModel" >
+		<div [hidden]="color.valid || color.pristine" 
+			class="alert alert-danger">
+			color is required
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<button 
+			[disabled]="loading || !eventForm.form.valid"
+			type="submit" 
+			class="btn btn-default">Submit</button>
+		</div>
+	</div>
+</form>

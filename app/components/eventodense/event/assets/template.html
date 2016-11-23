@@ -1,0 +1,12 @@
+<div class="container" *ngIf="event" >
+	<div class="row">
+		<div class="col-xs-6">
+			<h1>{{event.name}}</h1>
+		</div>
+		<div class="col-xs-6">
+			<h1 *ngIf="loading"><loader></loader></h1>
+		</div>
+	</div>
+	<div id="map">
+	</div>
+</div>

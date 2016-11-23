@@ -11,15 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var angular2_highcharts_1 = require('angular2-highcharts');
+var forms_1 = require('@angular/forms');
 var loader_component_1 = require('../loader/loader.component');
 var GlobalModule = (function () {
     function GlobalModule() {
     }
     GlobalModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, angular2_highcharts_1.ChartModule],
+            imports: [platform_browser_1.BrowserModule, angular2_highcharts_1.ChartModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             declarations: [loader_component_1.LoaderComponent],
-            exports: [loader_component_1.LoaderComponent, platform_browser_1.BrowserModule, angular2_highcharts_1.ChartModule],
+            exports: [loader_component_1.LoaderComponent, platform_browser_1.BrowserModule, angular2_highcharts_1.ChartModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
         }), 
         __metadata('design:paramtypes', [])
     ], GlobalModule);

@@ -16,7 +16,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            template: "<h1>Hello, this is just a demo thingy</h1>\n  \t\t\t<a routerLink=\"/moves\">Go to the moves API setup thingy</a>"
+            template: "<h1>Hello, this is just a demo thingy</h1>\n  \t\t\t<a routerLink=\"/moves\">Go to the moves API setup thingy</a>\n        <a routerLink=\"/events\">Go to event odense</a>"
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);
