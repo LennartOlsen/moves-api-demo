@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class EventOdenseService {
   
-  private url = 'http://localhost:8080/';  // URL to web API
+  private url = 'http://88.99.34.33:8080/';  // URL to web API
   
   constructor (private http: Http) {}
   

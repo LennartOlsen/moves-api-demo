@@ -82,7 +82,7 @@ export class EventOdenseEventComponent {
 	}
 
 	private plotEventOnMap(event : Event) {
-		L.circle([event.lat, event.lng], event.radius, {color: event.color}).addTo(this.map)
+		L.circle([event.lat, event.lng], event.radius, {color: event.color, opacity: 0.2, fillOpacity: 0.05}).addTo(this.map)
 	}
 	
 	private addLines(points){

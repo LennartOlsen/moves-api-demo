@@ -65,7 +65,7 @@ var EventOdenseEventComponent = (function () {
         this.map = map;
     };
     EventOdenseEventComponent.prototype.plotEventOnMap = function (event) {
-        L.circle([event.lat, event.lng], event.radius, { color: event.color }).addTo(this.map);
+        L.circle([event.lat, event.lng], event.radius, { color: event.color, opacity: 0.2, fillOpacity: 0.05 }).addTo(this.map);
     };
     EventOdenseEventComponent.prototype.addLines = function (points) {
         var ptl = new points_to_lines_1.PointsToLines(this.points);

@@ -16,7 +16,7 @@ require('rxjs/add/operator/catch');
 var EventOdenseService = (function () {
     function EventOdenseService(http) {
         this.http = http;
-        this.url = 'http://localhost:8080/'; // URL to web API
+        this.url = 'http://88.99.34.33:8080/'; // URL to web API
     }
     EventOdenseService.prototype.getPoints = function () {
         return this.http.get(this.url + 'points')

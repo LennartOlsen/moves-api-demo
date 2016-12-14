@@ -58,7 +58,7 @@ function buildColor(input) {
     var R = Math.round(seededRandom(0, 255, parseInt(input) + 'R'.charCodeAt(0)));
     var G = Math.round(seededRandom(0, 255, parseInt(input) + 'G'.charCodeAt(0)));
     var B = Math.round(seededRandom(0, 255, parseInt(input) + 'B'.charCodeAt(0)));
-    return 'RGBA(' + R + ',' + B + ',' + G + ',0.5)';
+    return 'RGBA(' + R + ',' + B + ',' + G + ',0.8)';
 }
 function seededRandom(max, min, seed) {
     max = max || 1;
